@@ -148,11 +148,13 @@ nav:
       - Kubernetes:
           - guides/kubernetes/getting-started.md
           - guides/kubernetes/using-kubectl.md
+          - guides/kubernetes/k3s-setup.md
       - Git:
           - guides/git/setting-up.md
       - Linux:
           - guides/linux/awesome-commands.md
           - guides/linux/file-permissions.md
+          - guides/linux/virtual-machine.md
       - Neovim:
           - guides/neovim/config.md
   - Blog:
