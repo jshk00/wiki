@@ -1,7 +1,7 @@
 site_name: Wiki Pot
-site_url: https://blog.arkj.org
-repo_url: https://github.com/ark-j/wiki
-repo_name: ark-j/wiki
+site_url: https://wiki.arkj.org
+repo_url: https://github.com/jshk00/wiki
+repo_name: jshk00/wiki
 theme:
   logo: assets/images/icon.jpg
   favicon: assets/images/icon.jpg
@@ -18,7 +18,7 @@ theme:
 
     # palettle for dark mode
     - scheme: slate
-      primary: indigo
+      primary: light blue
       toggle:
         icon: material/weather-sunny
         name: switch to light mode
