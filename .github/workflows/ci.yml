@@ -33,7 +33,7 @@ jobs:
           git checkout gh-pages
 
           # create cname file with content
-          echo "wiki.arkj.org" > CNAME
+          echo "wiki.jshk.dev" > CNAME
 
           # Add and commit the CNAME file
           git add CNAME
