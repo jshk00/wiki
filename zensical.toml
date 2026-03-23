@@ -1,55 +1,50 @@
 [project]
+nav = [
+	{ "Home" = "index.md" },
+	{ "Guides" = [
+		{ "Golang" = [
+			{ "Tutorials" = [
+				"guides/golang/tutorial/basics.md",
+				"guides/golang/tutorial/advanced.md",
+			] },
+			"guides/golang/common-pitfalls.md",
+			"guides/golang/http-error-handler.md",
+		] },
+		{ "Kubernetes" = [
+			"guides/kubernetes/getting-started.md",
+			"guides/kubernetes/using-kubectl.md",
+			"guides/kubernetes/k3s-setup.md",
+		] },
+		{ "Git" = [
+			"guides/git/setting-up.md",
+		] },
+		{ "Linux" = [
+			"guides/linux/awesome-commands.md",
+			"guides/linux/file-permissions.md",
+			"guides/linux/virtual-machine.md",
+			"guides/linux/settingup-remote-store.md",
+			"guides/linux/shell-scripting.md",
+		] },
+		{ "Neovim" = [
+			"guides/neovim/config.md",
+		] },
+	] },
+	{ "Syntax Guide" = "guides/mkdocs/index.md" },
+	{ "Blog" = [
+		"blog/openapi-golang.md",
+		"blog/golang-router.md",
+		"blog/opi5-ultra-setup.md",
+	] },
+]
+
 site_name = "wiki"
 site_url = "https://wiki.jshk.dev"
 site_author = "Jayesh Kale"
 repo_url = "https://github.com/jshk00/wiki"
 repo_name = "jshk00/wiki"
 docs_dir = "docs"
-extra_css = [
-	"css/style.css",
-	"css/termynal.css"
-]
-extra_javascript = [
-	"js/termynal.js",
-  "js/custom.js"
-]
-nav = [
-	{"Guides" = [
-		{"Golang" = [
-			{"Tutorials" = [
-				"guides/golang/tutorial/basics.md",
-				"guides/golang/tutorial/advanced.md"
-			]},
-			"guides/golang/common-pitfalls.md",
-			"guides/golang/http-error-handler.md"
-		]},
-		{"Kubernetes" = [
-			"guides/kubernetes/getting-started.md",
-			"guides/kubernetes/using-kubectl.md",
-			"guides/kubernetes/k3s-setup.md"
-		]},
-		{"Git" = [
-				"guides/git/setting-up.md"
-		]},
-		{"Linux" = [
-			"guides/linux/awesome-commands.md",
-			"guides/linux/file-permissions.md",
-			"guides/linux/virtual-machine.md",
-			"guides/linux/settingup-remote-store.md",
-			"guides/linux/shell-scripting.md"
-		]},
-		{"Neovim" = [
-			"guides/neovim/config.md"
-		]}
-	]},
-	{"Syntax Guide" = "guides/mkdocs/index.md"},
-	{"Blog" = [
-		"blog/openapi-golang.md",
-		"blog/golang-router.md",
-		"blog/opi5-ultra-setup.md"
-	]}
-]
-
+extra_css = ["css/style.css", "css/termynal.css"]
+extra_javascript = ["js/termynal.js", "js/custom.js"]
 [project.markdown_extensions.pymdownx.details]
 [project.markdown_extensions.pymdownx.caret]
 [project.markdown_extensions.pymdownx.mark]
@@ -100,14 +95,14 @@ features = [
 	"navigation.top",
 	"search.highlight",
 	"content.code.copy",
-	"content.code.select"
+	"content.code.select",
 ]
 
 [project.theme.font]
 text = "Inter"
 code = "JetBrainsMono Nerd Font"
 
-[[project.theme.palette]] 
+[[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
 toggle.icon = "lucide/sun"
@@ -120,5 +115,3 @@ scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 accent = "cyan"
-
-
