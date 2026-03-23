@@ -27,13 +27,3 @@ jobs:
           path: site
       - uses: actions/deploy-pages@v4
         id: deployment
-      - run: |
-          # Switch to the gh-pages branch
-          git fetch origin gh-pages
-          git checkout gh-pages
-          # create cname file with content
-          echo "wiki.jshk.dev" > CNAME
-          # Add and commit the CNAME file
-          git add CNAME
-          git commit -m "(add) cname file"
-          git push origin gh-pages
