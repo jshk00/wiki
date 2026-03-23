@@ -2,7 +2,8 @@ name: ci
 on:
   push:
     branches:
-      - zensical
+      - master
+      - main
 permissions:
   contents: write
   pages: write
