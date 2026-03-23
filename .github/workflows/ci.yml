@@ -2,39 +2,36 @@ name: ci
 on:
   push:
     branches:
-      - master
-      - main
+      - zensical
 permissions:
   contents: write
+  pages: write
+  id-token: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: actions/configure-pages@v5
+      - uses: actions/checkout@v5
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v4
+      - run: pip install zensical
+      - run: zensical build --clean
+      - uses: actions/upload-pages-artifact@v4
         with:
-          key: mkdocs-materialx-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-materialx-
-      - run: pip install mkdocs-materialx mkdocs-glightbox
-      - run: mkdocs gh-deploy --force
+          path: site
+      - uses: actions/deploy-pages@v4
+        id: deployment
       - run: |
           # Switch to the gh-pages branch
           git fetch origin gh-pages
           git checkout gh-pages
-
           # create cname file with content
           echo "wiki.jshk.dev" > CNAME
-
           # Add and commit the CNAME file
           git add CNAME
           git commit -m "(add) cname file"
