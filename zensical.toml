@@ -1,6 +1,6 @@
 [project]
 nav = [
-	# { "Home" = "index.md" },
+	{ "Home" = "index.md" },
 	{ "Guides" = [
 		{ "Golang" = [
 			{ "Tutorials" = [
