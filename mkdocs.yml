@@ -3,6 +3,7 @@ site_url: https://wiki.arkj.org
 repo_url: https://github.com/jshk00/wiki
 repo_name: jshk00/wiki
 theme:
+  topbar_style: glass
   logo: assets/images/icon.jpg
   favicon: assets/images/icon.jpg
   name: materialx
@@ -12,6 +13,7 @@ theme:
     # palettle for light mode
     - scheme: default
       primary: cyan
+      accent: cyan
       toggle:
         icon: material/weather-night
         name: switch to dark mode
@@ -19,6 +21,7 @@ theme:
     # palettle for dark mode
     - scheme: slate
       primary: cyan
+      accent: cyan
       toggle:
         icon: material/weather-sunny
         name: switch to light mode
