@@ -137,8 +137,8 @@ markdown_extensions:
       permalink: true
 nav:
   - index.md
-  # - Mkdocs Guide:
-  #     - guides/mkdocs/index.md
+  - Mkdocs Guide:
+      - guides/mkdocs/index.md
   - Guides:
       - Golang:
           - Tutorials:

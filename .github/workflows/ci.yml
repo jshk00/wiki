@@ -21,11 +21,11 @@ jobs:
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v4
         with:
-          key: mkdocs-material-${{ env.cache_id }}
+          key: mkdocs-materialx-${{ env.cache_id }}
           path: .cache
           restore-keys: |
-            mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-glightbox
+            mkdocs-materialx-
+      - run: pip install mkdocs-materialx mkdocs-glightbox
       - run: mkdocs gh-deploy --force
       - run: |
           # Switch to the gh-pages branch
