@@ -5,26 +5,27 @@ repo_name: jshk00/wiki
 theme:
   logo: assets/images/icon.jpg
   favicon: assets/images/icon.jpg
-  name: material
+  name: materialx
   custom_dir: overrides
   palette:
     # -- colors setting --
     # palettle for light mode
     - scheme: default
-      primary: indigo
+      primary: cyan
       toggle:
         icon: material/weather-night
         name: switch to dark mode
 
     # palettle for dark mode
     - scheme: slate
-      primary: light blue
+      primary: cyan
       toggle:
         icon: material/weather-sunny
         name: switch to light mode
 
   # -- font settings --
   font:
+    text: Inter
     code: JetBrainsMono Nerd Font
 
   # -- language settings --
@@ -67,7 +68,7 @@ theme:
 
 extra_css:
   - css/termynal.css
-  - css/custom.css
+  - css/style.css
 
 extra_javascript:
   - js/termynal.js
@@ -155,6 +156,8 @@ nav:
           - guides/linux/awesome-commands.md
           - guides/linux/file-permissions.md
           - guides/linux/virtual-machine.md
+          - guides/linux/settingup-remote-store.md
+          - guides/linux/shell-scripting.md
       - Neovim:
           - guides/neovim/config.md
   - Blog:
