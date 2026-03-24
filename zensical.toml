@@ -37,6 +37,7 @@ nav = [
 	] },
 ]
 
+# site settings
 site_name = "wiki"
 site_url = "https://wiki.jshk.dev"
 site_author = "Jayesh Kale"
@@ -45,37 +46,41 @@ repo_name = "jshk00/wiki"
 docs_dir = "docs"
 extra_css = ["css/style.css", "css/termynal.css"]
 extra_javascript = ["js/termynal.js", "js/custom.js"]
-[project.markdown_extensions.pymdownx.details]
-[project.markdown_extensions.pymdownx.caret]
-[project.markdown_extensions.pymdownx.mark]
-[project.markdown_extensions.pymdownx.tilde]
-[project.markdown_extensions.attr_list]
-[project.markdown_extensions.pymdownx.blocks.caption]
-[project.markdown_extensions.admonition]
-[project.markdown_extensions.def_list]
-[project.markdown_extensions.md_in_html]
-[project.markdown_extensions.tables]
-[project.markdown_extensions.toc]
-permalink = true
-[project.markdown_extensions.toc.slugify]
-object = "pymdownx.slugs.slugify"
-kwds = { case = "lower" }
-[project.markdown_extensions.pymdownx.emoji]
-emoji_index = "zensical.extensions.emoji.twemoji"
-emoji_generator = "zensical.extensions.emoji.to_svg"
+
+# extension
+[project.markdown_extensions]
+pymdownx.details = {}
+pymdownx.caret = {}
+pymdownx.mark = {}
+pymdownx.tilde = {}
+pymdownx.blocks.caption = {}
+pymdownx.inlinehilite = {}
+pymdownx.superfences = {}
+pymdownx.keys = {}
+attr_list = {}
+admonition = {}
+def_list = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+toc.slugify.object = "pymdownx.slugs.slugify"
+toc.slugify.kwds = { case = "lower" }
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+
 [project.markdown_extensions.pymdownx.highlight]
 anchor_linenums = true
 linenums = false
 linenums_style = "pymdownx-inline"
 line_spans = "__span"
 pygments_lang_class = true
-[project.markdown_extensions.pymdownx.inlinehilite]
-[project.markdown_extensions.pymdownx.superfences]
-[project.markdown_extensions.pymdownx.keys]
+
 [project.markdown_extensions.pymdownx.snippets]
 base_path = "codes"
+
 [project.markdown_extensions.pymdownx.tabbed]
 alternate_style = true
+
 [project.markdown_extensions.pymdownx.tabbed.slugify]
 object = "pymdownx.slugs.slugify"
 
