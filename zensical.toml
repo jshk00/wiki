@@ -104,7 +104,7 @@ features = [
 ]
 
 [project.theme.font]
-text = "Inter"
+text = "Adwaita Sans"
 code = "JetBrainsMono Nerd Font"
 
 [[project.theme.palette]]

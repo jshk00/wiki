@@ -2,25 +2,33 @@
   font-family: "JetBrainsMono Nerd Font";
   src: url("./fonts/JetBrainsMonoNerdFont-Regular.ttf");
 }
+@font-face {
+  font-family: "Adwaita Sans";
+  src: url("./fonts/AdwaitaSans-Regular.ttf");
+}
+
+p,
+li,
+ul,
+ol {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+code,
+pre {
+  font-size: 0.8rem;
+}
+
+li.md-nav__item {
+  font-size: 0.7rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
 
 .md-grid {
-  max-width: 85%;
-}
-
-code {
-  border-radius: 10px !important;
-}
-
-.filename {
-  border-radius: 10px 10px 0px 0px !important;
-}
-
-.md-tag {
-  border-radius: 5px !important;
-}
-
-img {
-  border-radius: 10px;
+  max-width: 90%;
 }
 
 termynal-comment {
