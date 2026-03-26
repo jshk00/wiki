@@ -84,13 +84,24 @@ alternate_style = true
 [project.markdown_extensions.pymdownx.tabbed.slugify]
 object = "pymdownx.slugs.slugify"
 
+[project.theme.icon.admonition]
+note = "octicons/tag-16"
+abstract = "octicons/checklist-16"
+info = "octicons/info-16"
+success = "octicons/check-16"
+question = "octicons/question-16"
+warning = "octicons/alert-16"
+failure = "octicons/x-circle-16"
+danger = "octicons/zap-16"
+bug = "octicons/bug-16"
+quote = "octicons/quote-16"
+
 [project.theme]
 logo = "assets/images/icon.jpg"
 favicon = "assets/images/icon.jpg"
 custom_dirs = "overrides"
 features = [
 	"navigation.instant",
-	"navigation.instant.prefetch",
 	"navigation.instant.progress",
 	"navigation.tracking",
 	"navigation.tabs",
@@ -100,11 +111,10 @@ features = [
 	"navigation.top",
 	"search.highlight",
 	"content.code.copy",
-	"content.code.select",
 ]
 
 [project.theme.font]
-text = "Adwaita Sans"
+text = "Inter"
 code = "JetBrainsMono Nerd Font"
 
 [[project.theme.palette]]
