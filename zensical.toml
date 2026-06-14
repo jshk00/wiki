@@ -24,6 +24,9 @@ nav = [
 			"guides/linux/virtual-machine.md",
 			"guides/linux/settingup-remote-store.md",
 			"guides/linux/shell-scripting.md",
+			"guides/linux/ssh.md",
+			"guides/linux/dns.md",
+			"guides/linux/networking.md",
 		] },
 		{ "Neovim" = [
 			"guides/neovim/config.md",

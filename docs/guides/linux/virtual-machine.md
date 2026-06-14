@@ -19,7 +19,8 @@ sudo virt-install \
     --network network=default,model=virtio \
     --noautoconsole \
     --autostart \
-    --graphics=spice,listen=0.0.0.0 
+    # --graphics=vnc,listen=0.0.0.0 # uncomment if vnc required
+    --graphics=spice,listen=0.0.0.0
 ```
 
 # Some useful commands

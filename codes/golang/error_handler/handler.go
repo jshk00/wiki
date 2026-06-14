@@ -44,6 +44,7 @@ type AppErr struct {
 	status int
 }
 
+
 func HTTPError(e error, m string, code int) AppErr {
 	return AppErr{e, m, code}
 }
