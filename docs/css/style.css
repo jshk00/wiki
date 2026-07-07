@@ -3,24 +3,6 @@
   src: url("./fonts/JetBrainsMonoNerdFont-Regular.ttf");
 }
 
-li,
-ul,
-ol,
-p {
-  font-size: 0.8rem;
-  line-height: 1.6;
-}
-
-code,
-pre {
-  font-size: 0.8rem;
-}
-
-li.md-nav__item {
-  font-size: 0.7rem;
-  line-height: 1.6;
-}
-
 h1,
 h2,
 h3,
@@ -29,6 +11,7 @@ h5,
 h6 {
   font-weight: 300 !important;
 }
+
 .md-grid {
   max-width: 85%;
 }
