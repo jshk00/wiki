@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jayesh Kale</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b1120;
+        --card: #111827;
+        --border: #243247;
+        --text: #eef2ff;
+        --muted: #9ca3af;
+        --accent: #3b82f6;
+        --accent2: #22c55e;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, sans-serif;
+        background:
+          radial-gradient(circle at top right, #1d4ed822, transparent 40%),
+          radial-gradient(circle at bottom left, #22c55e11, transparent 40%),
+          var(--bg);
+        color: var(--text);
+      }
+      .container {
+        width: min(1180px, 92%);
+        margin: auto;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: center;
+        min-height: 90vh;
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.45rem 0.8rem;
+        background: #152238;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: #8ab4ff;
+        font-size: 0.85rem;
+      }
+      h1 {
+        font-size: 4rem;
+        margin: 0.5rem 0;
+        line-height: 1;
+      }
+      .subtitle {
+        font-size: 1.35rem;
+        color: #b6c2d1;
+        margin-bottom: 1.2rem;
+      }
+      p {
+        line-height: 1.8;
+        color: var(--muted);
+      }
+      .buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 14px 22px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.2s;
+      }
+      .primary {
+        background: var(--accent);
+        color: white;
+      }
+      .secondary {
+        border: 1px solid var(--border);
+        color: white;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+      .terminal {
+        background: #0d1324;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      }
+      .term-head {
+        background: #131d33;
+        padding: 12px;
+        display: flex;
+        gap: 8px;
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+      .red {
+        background: #ef4444;
+      }
+      .yellow {
+        background: #f59e0b;
+      }
+      .green {
+        background: #22c55e;
+      }
+      pre {
+        margin: 0;
+        padding: 25px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.95rem;
+        color: #9ef3c8;
+        min-height: 320px;
+      }
+      section {
+        padding: 90px 0;
+      }
+      .title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 24px;
+        border-radius: 16px;
+        transition: 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: #3b82f6;
+      }
+      .card h3 {
+        margin-top: 0;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .stat {
+        background: var(--card);
+        padding: 30px;
+        border-radius: 16px;
+        text-align: center;
+        border: 1px solid var(--border);
+      }
+      .stat strong {
+        display: block;
+        font-size: 2rem;
+        color: #60a5fa;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .chip {
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: #162033;
+        border: 1px solid var(--border);
+      }
+      footer {
+        padding: 60px 0;
+        border-top: 1px solid var(--border);
+        text-align: center;
+        color: var(--muted);
+      }
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 3rem;
+        }
+        .stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .stats {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero">
+        <div>
+          <span class="badge">Senior Software Engineer</span>
+
+          <h1>Jayesh Kale</h1>
+
+          <div class="subtitle">
+            Backend • Distributed Systems • Go • Linux • Kubernetes
+          </div>
+
+          <p>
+            Building scalable backend services, developer tooling,
+            infrastructure automation, and high-performance distributed systems.
+            Passionate about Go, Linux internals, cloud-native technologies, and
+            open source.
+          </p>
+
+          <div class="buttons">
+            <a class="btn primary" href="/guides/golang/tutorial/basics"
+              >Documentation</a
+            >
+            <a class="btn secondary" href="https://github.com/jshk00">GitHub</a>
+            <!-- <a class="btn secondary" href="#">Resume</a> -->
+          </div>
+        </div>
+
+        <div class="terminal">
+          <div class="term-head">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <pre id="term"></pre>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="title">Featured Projects</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>triad</h3>
+            <p>
+              Minimal HTTP router with middleware, context propagation and
+              centralized error handling.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>collections</h3>
+            <p>
+              Concurrent-safe data structures including TTL maps, worker pools
+              and sharded collections.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>httpx-go</h3>
+            <p>
+              Reusable HTTP client with retries, middleware and fluent builder
+              APIs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="title">Engineering Impact</h2>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>80%</strong>
+            Infrastructure setup automation
+          </div>
+
+          <div class="stat">
+            <strong>20%</strong>
+            API latency improvement
+          </div>
+
+          <div class="stat">
+            <strong>4M+</strong>
+            Objects migrated
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="title">Technology Stack</h2>
+
+        <div class="chips">
+          <span class="chip">Go</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Kubernetes</span>
+          <span class="chip">Helm</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Kafka</span>
+          <span class="chip">NATS</span>
+          <span class="chip">gRPC</span>
+          <span class="chip">REST</span>
+          <span class="chip">Bash</span>
+          <span class="chip">Git</span>
+          <span class="chip">Jenkins</span>
+          <span class="chip">Vault</span>
+          <span class="chip">Libvirt</span>
+          <span class="chip">ShellScript</span>
+        </div>
+      </section>
+
+      <footer>
+        <p>Open Source • Documentation • Distributed Systems</p>
+        <p>GitHub • LinkedIn • wiki.jshk.dev</p>
+      </footer>
+    </div>
+
+    <script>
+      const text = `$ whoami
+
+Jayesh Kale
+
+$ stack
+
+Go
+Linux
+Kubernetes
+PostgreSQL
+Distributed Systems
+
+$ status
+
+Open Source Contributor
+Backend Engineer
+
+$ github
+
+github.com/jshk00
+
+$ _`;
+
+      let i = 0;
+      const term = document.getElementById("term");
+
+      (function type() {
+        if (i < text.length) {
+          term.textContent += text.charAt(i++);
+          setTimeout(type, 18);
+        }
+      })();
+    </script>
+  </body>
+</html>

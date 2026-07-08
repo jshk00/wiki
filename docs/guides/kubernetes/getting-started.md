@@ -1,6 +1,5 @@
 ---
 title: Getting started
-comments: true
 ---
 
 Kubernetes is the go-to platform for managing containerized applications at scale. However, for beginners, it can feel overwhelming.

@@ -1,6 +1,5 @@
 ---
 title: getting started
-comments: true
 ---
 
 # Setting up git for first time

@@ -9,11 +9,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 
-.md-grid {
-  max-width: 85%;
+.md-typeset pre,
+.md-typeset .highlight {
+  border-radius: 10px !important;
+  overflow: hidden;
 }
 
 termynal-comment {

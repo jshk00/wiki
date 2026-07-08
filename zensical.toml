@@ -1,6 +1,16 @@
-[project]
+# site settings
+site_name = "wiki"
+site_url = "https://wiki.jshk.dev"
+site_author = "Jayesh Kale"
+repo_url = "https://github.com/jshk00/wiki"
+repo_name = "jshk00/wiki"
+docs_dir = "docs"
+extra_css = ["css/style.css", "css/termynal.css"]
+extra_javascript = ["js/termynal.js", "js/custom.js"]
+
+# nav tree
 nav = [
-	{ "Home" = "index.md" },
+	{ "Home" = "index.html" },
 	{ "Guides" = [
 		{ "Golang" = [
 			{ "Tutorials" = [
@@ -32,7 +42,7 @@ nav = [
 			"guides/neovim/config.md",
 		] },
 	] },
-	{ "Syntax Guide" = "guides/mkdocs/index.md" },
+	# { "Syntax Guide" = "guides/mkdocs/index.md" },
 	{ "Blog" = [
 		"blog/openapi-golang.md",
 		"blog/golang-router.md",
@@ -40,54 +50,46 @@ nav = [
 	] },
 ]
 
-# site settings
-site_name = "wiki"
-site_url = "https://wiki.jshk.dev"
-site_author = "Jayesh Kale"
-repo_url = "https://github.com/jshk00/wiki"
-repo_name = "jshk00/wiki"
-docs_dir = "docs"
-extra_css = ["css/style.css", "css/termynal.css"]
-extra_javascript = ["js/termynal.js", "js/custom.js"]
 
-# extension
-[project.markdown_extensions]
-pymdownx.details = {}
-pymdownx.caret = {}
-pymdownx.mark = {}
-pymdownx.tilde = {}
-pymdownx.blocks.caption = {}
-pymdownx.inlinehilite = {}
-pymdownx.superfences = {}
-pymdownx.keys = {}
+[markdown_extensions]
 attr_list = {}
 admonition = {}
 def_list = {}
 md_in_html = {}
 tables = {}
-toc.permalink = true
-toc.slugify.object = "pymdownx.slugs.slugify"
-toc.slugify.kwds = { case = "lower" }
-pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
-pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+zensical.extensions.glightbox = {}
 
-[project.markdown_extensions.pymdownx.highlight]
-anchor_linenums = true
-linenums = false
-linenums_style = "pymdownx-inline"
-line_spans = "__span"
-pygments_lang_class = true
+[markdown_extensions.toc]
+permalink = true
+slugify.object = "pymdownx.slugs.slugify"
+slugify.kwds = { case = "lower" }
 
-[project.markdown_extensions.pymdownx.snippets]
-base_path = "codes"
+[markdown_extensions.pymdownx]
+details = {}
+caret = {}
+mark = {}
+tilde = {}
+blocks.caption = {}
+inlinehilite = {}
+superfences = {}
+keys = {}
+emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
 
-[project.markdown_extensions.pymdownx.tabbed]
-alternate_style = true
+# highlight
+highlight.anchor_linenums = true
+highlight.linenums_style = "pymdownx-inline"
+highlight.line_spans = "__span"
+highlight.pygments_lang_class = true
 
-[project.markdown_extensions.pymdownx.tabbed.slugify]
-object = "pymdownx.slugs.slugify"
+# snippet
+snippets.base_path = "codes"
 
-[project.theme.icon.admonition]
+# tabbed
+tabbed.alternate_style = true
+tabbed.slugify.object = "pymdownx.slugs.slugify"
+
+[theme.icon.admonition]
 note = "octicons/tag-16"
 abstract = "octicons/checklist-16"
 info = "octicons/info-16"
@@ -99,10 +101,10 @@ danger = "octicons/zap-16"
 bug = "octicons/bug-16"
 quote = "octicons/quote-16"
 
-[project.theme]
+
+[theme]
 logo = "assets/images/icon.jpg"
 favicon = "assets/images/icon.jpg"
-custom_dirs = "overrides"
 features = [
 	"navigation.instant",
 	"navigation.instant.progress",
@@ -115,19 +117,18 @@ features = [
 	"search.highlight",
 	"content.code.copy",
 ]
+# fonts
+font.text = "Inter"
+font.code = "JetBrainsMono Nerd Font"
 
-[project.theme.font]
-text = "Inter"
-code = "JetBrainsMono Nerd Font"
-
-[[project.theme.palette]]
+[[theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 accent = "cyan"
 
-[[project.theme.palette]]
+[[theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 toggle.icon = "lucide/moon"
