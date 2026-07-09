@@ -5,7 +5,7 @@ tags:
     - guides
 ---
 
-### Basic Info
+## Basic Info
 ---
 
 1. Go programs are made up of packages
@@ -47,7 +47,7 @@ func GreetBomb() {
 	}
 }
 ```
-### How to execute
+## How to execute
 ---
 
 - Execution of program starts from `main()` function in main package
@@ -57,7 +57,7 @@ func GreetBomb() {
 
 > note: in order to use build command you should initialize go-modules for project directory
 
-### Variables
+## Variables
 ---
 
 - you can declare variables like `var name string` or `var name = "qwerty"` or `name := "qwerty"`.
@@ -67,7 +67,7 @@ func GreetBomb() {
 !!! warning
     global variables cannot be declared by wallrus operator
 
-### Data Types
+## Data Types
 ---
 
 - everything in go is type just like everything in python is object.
@@ -81,7 +81,7 @@ func GreetBomb() {
 - `string` is slice of bytes and can be declare using double qoutes which respects escape sequence while raw string does not.
 - `boolean` → `OR ||` `AND &&` `NEGATION !`
 
-### Control flow
+## Control flow
 ---
 
 - Go provide control flow statement such as if - else, switch, for loop.
@@ -154,7 +154,7 @@ func loop() {
 }
 ```
 
-### Functions
+## Functions
 ---
 
 - basic function in golang
@@ -233,7 +233,7 @@ func init(){
 // main function
 ```
 
-### Errors
+## Errors
 ---
 
 - Go’s way of dealing with an error is to explicitly return the error as a separate value
@@ -302,12 +302,12 @@ func (i *inputError) getMissingField() string {
 }
 ```
 
-### Panic and recover
+## Panic and recover
 ---
 
 - you can wrap error using  `fmt.Errorf("E2: %w", e1)` %w is used to wrap an error.
 
-### Defer keyword
+## Defer keyword
 ---
 
 - defer keyword send any execution to end of function
@@ -332,7 +332,7 @@ func main() {
 // 1
 ```
 
-### Pointers
+## Pointers
 ---
 
 - pointer declaration `var sptr *string`
@@ -371,7 +371,7 @@ ssptr value to original pointer: 0xc00004c230
 actual ssptr point value derefrenced: Jayesh
 ```
 
-### Structs
+## Structs
 ---
 
 - struct is collection of fields.
@@ -401,7 +401,7 @@ type employer struct {
 }
 ```
 
-### Slices
+## Slices
 ---
 
 - slices in golang represents three follwing things →
@@ -419,7 +419,7 @@ type employer struct {
     
 - default value of slice is usable.
 
-### Maps
+## Maps
 ---
 
 - default nil value of map cannot be used.
@@ -475,7 +475,7 @@ func mapPassed(user map[string]string) {
 // map[name:John wick profession:assasination status:rich]
 ```
 
-### Methods
+## Methods
 ---
 
 - methods are receiver function on specific type, eg struct or other function or interface.
@@ -526,7 +526,7 @@ func main() {
 }
 ```
 
-### Interfaces
+## Interfaces
 ---
 
 - basic syntax

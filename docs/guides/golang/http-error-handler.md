@@ -13,6 +13,7 @@ func GetHandler(w http.ResponseWriter, r *http.Request) {
     w.Write([]byte("successful response"))
 }
 ```
+
 As a human we may eventually forgot to return just after writing error. so we are exploring ways to handle error gracefully leaveraging the interface implementation of golang. If you look at the core of http handler it's just a interface. 😄 Good thing for us that we can easily implement it. Lets dig in.
 
 ## Error handling in standard http handler by creating custom handler method

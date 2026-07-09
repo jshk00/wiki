@@ -3,6 +3,41 @@
   src: url("./fonts/JetBrainsMonoNerdFont-Regular.ttf");
 }
 
+:root {
+  --default-text-color: black;
+}
+
+[data-md-color-scheme="default"] .md-typeset p,
+[data-md-color-scheme="default"] .md-typeset ul,
+[data-md-color-scheme="default"] .md-typeset ol,
+[data-md-color-scheme="default"] .md-typeset li {
+  color: var(--default-text-color);
+}
+
+p,
+li,
+ul,
+ol {
+  line-height: 1.7;
+}
+
+p,
+li,
+ul,
+ol,
+pre,
+code {
+  font-size: 0.8rem;
+}
+
+div.admonition p {
+  font-size: 0.7rem;
+}
+
+ul.md-nav__list li {
+  font-size: 0.7rem;
+}
+
 h1,
 h2,
 h3,
