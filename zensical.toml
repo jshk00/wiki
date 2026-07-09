@@ -12,11 +12,10 @@ extra_javascript = ["js/termynal.js", "js/custom.js"]
 nav = [
 	{ "Home" = "index.html" },
 	{ "Guides" = [
+		"guides/index.md",
 		{ "Golang" = [
-			{ "Tutorials" = [
-				"guides/golang/tutorial/basics.md",
-				"guides/golang/tutorial/advanced.md",
-			] },
+			"guides/golang/basics.md",
+			"guides/golang/advanced.md",
 			"guides/golang/common-pitfalls.md",
 			"guides/golang/http-error-handler.md",
 		] },
@@ -38,11 +37,7 @@ nav = [
 			"guides/linux/dns.md",
 			"guides/linux/networking.md",
 		] },
-		{ "Neovim" = [
-			"guides/neovim/config.md",
-		] },
 	] },
-	# { "Syntax Guide" = "guides/mkdocs/index.md" },
 	{ "Blog" = [
 		"blog/openapi-golang.md",
 		"blog/golang-router.md",
@@ -111,10 +106,9 @@ features = [
 	"navigation.tracking",
 	"navigation.tabs",
 	"navigation.path",
-	"navigation.prune",
+	"navigation.indexes",
 	"toc.follow",
 	"navigation.top",
-	"search.highlight",
 	"content.code.copy",
 ]
 # fonts
