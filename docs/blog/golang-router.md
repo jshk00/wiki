@@ -10,10 +10,6 @@ tags: ["go", "http", "rest-api"]
 ## The missing apis of golang net/http
 From version go 1.22 we have new `http.ServeMux` though you can also call it default router from standard library. It does exactly what third party routers used to do. Routing the paths using more efficient algorigthm in this case `Radix tree`. Still `net/http` have some methods missing for grouping and middlware, Good news is that we can just implement it by our own. Although not all feature from custom router like chi supported eg. regex matching. If you're willing to sacrifice that well let's dig in. 
 
-!!! note
-    Regex Matching is not actually good design choice
-
-
 ## Getting started with router structure
 
 ```go
